@@ -14,6 +14,7 @@
   background-color: gray;
   padding: 0.5rem;
   margin-bottom: 1rem;
+  border-radius: 0.5rem;
 }
 .date {
   text-align: center;
