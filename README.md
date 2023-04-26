@@ -1,4 +1,4 @@
-Dùng props truyền dữ liệu có sẵn vào các Component.
+Dùng props truyền dữ liệu có sẵn vào các React Component.
 
 # Getting Started with Create React App
 
