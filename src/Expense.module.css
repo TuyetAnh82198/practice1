@@ -1,0 +1,49 @@
+.expenseBigDiv {
+  background-color: black;
+  width: 60%;
+  border-radius: 0.5rem;
+  color: white;
+  margin-top: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.item {
+  display: flex;
+  background-color: gray;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+.date {
+  text-align: center;
+  border: white solid 0.05rem;
+  width: 6rem;
+  background-color: rgb(62, 62, 62);
+  border-radius: 0.5rem;
+}
+.date p {
+  margin: 0.5rem;
+}
+.titleandamount {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.title {
+  margin-left: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 2.5rem;
+}
+.amount {
+  margin-top: 2.5rem;
+  border: solid 0.05rem white;
+  border-radius: 0.5rem;
+  background-color: rgb(87, 9, 110);
+  margin-bottom: 2.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.1rem;
+  font-weight: 600;
+}
