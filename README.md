@@ -1,5 +1,7 @@
 Dùng props truyền dữ liệu có sẵn vào các React Component.
 
+Truyền dữ liệu từ component con tới component cha. Quản lý trạng thái; xử lý thông tin input; lọc bỏ những năm trùng nhau trong dữ liệu có sẵn và thao tác với ; khi click vào nút thì thông tin sẽ thay đổi.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
