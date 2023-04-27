@@ -1,5 +1,10 @@
+import React, { createContext } from "react";
+
 import styles from "./App.module.css";
 import Expense from "./Expense.jsx";
+import ExpenseForm from "./ExpenseForm.jsx";
+
+export const ExpenseContext = createContext();
 
 function App() {
   const expenses = [
@@ -29,9 +34,16 @@ function App() {
     },
   ];
   return (
-    <div className={styles.expense}>
-      <Expense data={expenses} />
-    </div>
+    <ExpenseContext.Provider value={expenses}>
+      <React.Fragment>
+        <div className={styles.expense}>
+          <ExpenseForm />
+        </div>
+        <div className={styles.expense}>
+          <Expense data={expenses} />
+        </div>
+      </React.Fragment>
+    </ExpenseContext.Provider>
   );
 }
 

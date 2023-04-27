@@ -1,0 +1,17 @@
+.efilter {
+  display: flex;
+  justify-content: space-between;
+  /* padding-bottom: 1rem; */
+}
+.efilter p {
+  font-weight: 500;
+}
+.efilter select {
+  margin-right: 1rem;
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 650;
+}

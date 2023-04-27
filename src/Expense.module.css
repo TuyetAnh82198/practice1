@@ -41,10 +41,24 @@
   margin-top: 2.5rem;
   border: solid 0.05rem white;
   border-radius: 0.5rem;
-  background-color: rgb(87, 9, 110);
+  background-color: #57096e;
   margin-bottom: 2.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 0.1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   font-weight: 600;
+}
+.amountandbtn {
+  display: flex;
+}
+.amountandbtn button {
+  font-weight: 600;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: 0.05rem;
+  height: 2rem;
+  border-radius: 0.2rem;
+  border: none;
+  margin-top: 2.7rem;
 }

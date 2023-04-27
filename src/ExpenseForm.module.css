@@ -1,0 +1,41 @@
+.eform {
+  width: 60%;
+  background-color: rgb(192, 152, 230);
+  margin-top: 2rem;
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+}
+.eform p {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.eform input {
+  border: none;
+  padding: 1rem;
+  width: 22rem;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+}
+.titleandamount {
+  display: flex;
+}
+.amount {
+  margin-left: 1rem;
+}
+.dateandbnt {
+  display: flex;
+}
+.dateandbnt button {
+  background-color: #57096e;
+  color: white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 10rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  margin-left: 20rem;
+}
