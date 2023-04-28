@@ -1,3 +1,7 @@
+.formandexpenses {
+  display: flex;
+  justify-content: center;
+}
 .eform {
   width: 60%;
   background-color: rgb(192, 152, 230);
@@ -37,5 +41,22 @@
   padding-bottom: 1rem;
   font-size: 1.2rem;
   border-radius: 0.5rem;
-  margin-left: 20rem;
+}
+.btnadd {
+  text-align: center;
+}
+.btnadd button {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: white;
+  background-color: #57096e;
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+}
+.btncancel {
+  margin-left: 12rem;
+  margin-right: 1rem;
 }

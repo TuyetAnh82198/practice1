@@ -1,6 +1,5 @@
 .expenseBigDiv {
   background-color: black;
-  width: 60%;
   border-radius: 0.5rem;
   color: white;
   margin-top: 5rem;
@@ -8,6 +7,7 @@
   padding-right: 1rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+  width: 60%;
 }
 .item {
   display: flex;

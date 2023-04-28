@@ -1,8 +1,17 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useContext } from "react";
 
 import styles from "./ExpenseForm.module.css";
 
+import { ExpenseContext } from "./App.js";
+import Expense from "./Expense.jsx";
+
 const ExpenseForm = () => {
+  const expense = useContext(ExpenseContext);
+
+  const [expenses, setExpenses] = useState(expense);
+  //state ẩn hiển form
+  const [isHide, setIsHide] = useState(true);
+
   const titleInput = useRef();
   const amountInput = useRef();
   const dateInput = useRef();
@@ -11,39 +20,79 @@ const ExpenseForm = () => {
   let oj;
 
   const addExpense = () => {
-    oj = {
-      title: titleInput.current.value,
-      amount: amountInput.current.value,
-      date: new Date(
-        dateInput.current.value.split("-")[0],
-        dateInput.current.value.split("-")[1],
-        dateInput.current.value.split("-")[2]
-      ),
-    };
-    console.log(oj);
-    titleInput.current.value = "";
-    amountInput.current.value = "";
-    dateInput.current.value = "";
+    if (
+      titleInput.current.value === "" ||
+      amountInput.current.value === "" ||
+      dateInput.current.value === ""
+    ) {
+      alert("Moi nhap thong tin");
+    } else {
+      oj = {
+        id: Math.random().toString(),
+        title: titleInput.current.value,
+        amount: amountInput.current.value,
+        date: dateInput.current.value,
+      };
+      console.log(oj);
+      //dùng if và includes kiểm tra trước khi setExpenses, để tránh setExpenses thực hiện push hai lần khiến mảng bị trùng phần tử không cần thiết
+      setExpenses((prevState) => {
+        if (!prevState.includes(oj)) {
+          prevState.push(oj);
+        }
+      });
+      console.log(expenses);
+      titleInput.current.value = "";
+      amountInput.current.value = "";
+      dateInput.current.value = "";
+      setIsHide(true);
+    }
   };
 
   return (
-    <div className={styles.eform}>
-      <div className={styles.titleandamount}>
-        <div>
-          <p>Title</p>
-          <input type="text" ref={titleInput} />
-        </div>
-        <div className={styles.amount}>
-          <p>Amount</p>
-          <input type="text" ref={amountInput} />
+    <div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div className={styles.eform}>
+          {isHide && (
+            <div className={styles.btnadd}>
+              <button onClick={() => setIsHide(false)}>Add New Expense</button>
+            </div>
+          )}
+          {!isHide && (
+            <div>
+              <div className={styles.titleandamount}>
+                <div>
+                  <p>Title</p>
+                  <input type="text" ref={titleInput} />
+                </div>
+                <div className={styles.amount}>
+                  <p>Amount</p>
+                  <input type="text" ref={amountInput} />
+                </div>
+              </div>
+              <div className={styles.dateandbnt}>
+                <div>
+                  <p>Date</p>
+                  <input type="date" ref={dateInput} />
+                </div>
+                <button
+                  className={styles.btncancel}
+                  onClick={() => setIsHide(true)}
+                >
+                  Cancel
+                </button>
+                <button onClick={addExpense}>Add Expense</button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
-      <div className={styles.dateandbnt}>
-        <div>
-          <p>Date</p>
-          <input type="date" ref={dateInput} />
-        </div>
-        <button onClick={addExpense}>Add Expense</button>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Expense data={expenses} />
       </div>
     </div>
   );
