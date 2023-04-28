@@ -2,6 +2,12 @@ Dùng props truyền dữ liệu có sẵn vào các React Component.
 
 Truyền dữ liệu bằng useContext. Quản lý trạng thái; xử lý thông tin input: lấy thông tin, xóa dữ liệu đã nhập trên trường input; lọc bỏ những năm trùng nhau trong dữ liệu có sẵn và thao tác với ; khi click vào nút thì thông tin sẽ thay đổi.
 
+Hiển thị danh sách dựa theo bộ lọc năm.
+
+Hiển thị "Found no expenses." nếu năm đó không có chi tiêu nào; Ẩn/Hiện Form thêm mới chi tiêu.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
